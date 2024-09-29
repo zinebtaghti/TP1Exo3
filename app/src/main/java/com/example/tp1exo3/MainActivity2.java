@@ -15,12 +15,12 @@ private TextView qe2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
         qe1=findViewById(R.id.qe1);
         qe2=findViewById(R.id.qe2);
-        qe1.setText(this.getIntent().getStringExtra("q1"));
-        qe2.setText(this.getIntent().getStringExtra("q2"));
+        qe1.setText("Q1:"+this.getIntent().getStringExtra("q1"));
+        qe2.setText("Q2:"+this.getIntent().getStringExtra("q2"));
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
